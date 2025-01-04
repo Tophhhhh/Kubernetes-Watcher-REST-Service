@@ -3,6 +3,7 @@
 
 > [!IMPORTANT]
 > Aufgesetzter Minikube oder Kubernetes cluster wird benötigt
+> Helmcharts sind noch in Arbeit! :)
 
 # Anleitung
 Um die Testumgebung zum laufen zu bringen, müssen folgende Schritte erledigt werden.
@@ -12,11 +13,7 @@ Um die Testumgebung zum laufen zu bringen, müssen folgende Schritte erledigt we
 4. Kubernetes files des Configwatchers hochladen
 
 > [!NOTE]
-> Die Kubernetes files sollte in folgender reihenfolge hochgeladen werden 
-> 1. Configmap
-> 2. Deployment
-> 3. Service
-> 4. configwatcher/WatcherDeployment
+> Hierfür muss der k8s und der k8s/configwatcher Ordner hochgeladen werden
 
 Folgende Befehle können hilfreich sein
 ```
@@ -24,7 +21,7 @@ Bauen des Docker images:
 Docker build -t test-restservice:v1.0.1 .
 
 hochladen von Kubernetes Datein:
-kubectl apply -f [Datei]
+kubectl apply -f [Ordner]
 ```
 
 # Übersicht
